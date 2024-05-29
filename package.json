@@ -1,0 +1,49 @@
+{
+  "name": "queue-service",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Faraz Patankar",
+  "main": "dist/index.js",
+  "module": "dist/queue-service.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "dts build",
+    "lint": "dts lint",
+    "watch": "dts watch",
+    "start": "node dist/index.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "dts lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "peerDependencies": {},
+  "engines": {
+    "node": ">=12"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "dts-cli": "^1.6.0",
+    "husky": "^8.0.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.3"
+  },
+  "dependencies": {
+    "@bull-board/api": "^4.2.2",
+    "@bull-board/fastify": "^4.2.2",
+    "@bull-board/ui": "^4.2.2",
+    "bullmq": "^1.90.2",
+    "envsafe": "^2.0.3",
+    "fastify": "^4.5.3"
+  }
+}
